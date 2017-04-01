@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrimAlgorithm", "PrimAlgorithm\PrimAlgorithm.vcxproj", "{E74E9FB5-A548-407A-8E27-4386199B987F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generator", "Generator\Generator.vcxproj", "{DD0D5F4D-49ED-42C8-948C-E90C7456C6A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{E74E9FB5-A548-407A-8E27-4386199B987F}.Debug|Win32.Build.0 = Debug|Win32
 		{E74E9FB5-A548-407A-8E27-4386199B987F}.Release|Win32.ActiveCfg = Release|Win32
 		{E74E9FB5-A548-407A-8E27-4386199B987F}.Release|Win32.Build.0 = Release|Win32
+		{DD0D5F4D-49ED-42C8-948C-E90C7456C6A4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD0D5F4D-49ED-42C8-948C-E90C7456C6A4}.Debug|Win32.Build.0 = Debug|Win32
+		{DD0D5F4D-49ED-42C8-948C-E90C7456C6A4}.Release|Win32.ActiveCfg = Release|Win32
+		{DD0D5F4D-49ED-42C8-948C-E90C7456C6A4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
