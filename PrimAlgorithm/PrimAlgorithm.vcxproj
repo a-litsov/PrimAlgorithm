@@ -78,6 +78,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RCGGenerator.cpp" />
+    <ClCompile Include="sol.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="RCGGenerator.h" />
+    <ClInclude Include="sol.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
