@@ -42,7 +42,7 @@ int main(int argc, const char * argv[]) {
 
 	/* Checking correctness and writing result*/
 	if (systemMinWeight == studentMinWeight) {
-		checker_result.write_message("AC. Positions are equal.");
+		checker_result.write_message("AC. Minimal weights are equal.");
 		checker_result.write_verdict(verdict::AC);
 	}
 	else {

@@ -56,7 +56,6 @@ int** RCGGenerator::getAdjacencyMatrix(int n)
 	}
 
 	int remainingEdges = rand() % (m - n + 1);
-	std::cout << remainingEdges << "\n" << m << "\n";
 	for (int i = 0; i < remainingEdges; i++)
 	{
 		value = getRandomWeight();

@@ -43,7 +43,7 @@ int** RCGGenerator::getAdjacencyMatrix(int n)
 	prevMap[prevArray[0]] = true;
 	
 	int start, end, value;
-	// Generates 1 edge for each vertice
+	// Generates 1 edge for each vertex
 	for (int i = 1; i < n; i++) {
 		start = prevArray[rand() % i], end = getRandomVertex(n), value = getRandomWeight();
 		while (prevMap[end] == true)
@@ -55,7 +55,7 @@ int** RCGGenerator::getAdjacencyMatrix(int n)
 		prevMap[end] = true;
 	}
 
-	int remainingEdges = rand() % (m - n + 1);
+	int remainingEdges = (m == n-1) ? 0 : rand() % (m - n + 1);
 	std::cout << remainingEdges << "\n" << m << "\n";
 	for (int i = 0; i < remainingEdges; i++)
 	{

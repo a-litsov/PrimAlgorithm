@@ -14,12 +14,16 @@ int main(int argc, char * argv[])
 
 	/* memory allocation */
 	int n;
+
+	/* reading */
+	infile.read((char*)&n, sizeof(int));
+
+	/* memory allocation */
 	int **g = new int*[n];
 	for (int i = 0; i < n; i++)
 		g[i] = new int[n];
 
 	/* reading */
-	infile.read((char*)&n, sizeof(int));
 	for (int i = 0; i < n; i++)
 	{
 		infile.read((char *)g[i], n * sizeof(int));
