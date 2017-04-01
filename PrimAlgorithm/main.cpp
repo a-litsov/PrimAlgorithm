@@ -5,10 +5,8 @@
 #include "sol.h"
 
 int main(int argc, char** argv) {
-	int n = 4;
+	int n = 2000;
 	int** g = RCGGenerator::generateConnectedGraph(n);
-
-	RCGGenerator::showGraph(g, n);
 
 	int minWeight = PrimAlgorithm(n, g);
 	std::cout << "Min weight is " << minWeight << "\n";

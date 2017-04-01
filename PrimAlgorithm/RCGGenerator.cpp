@@ -49,16 +49,19 @@ int** RCGGenerator::generateConnectedGraph(int n)
 	srand(int(time(0)));
 	int** g = initializeGraphMatrix(n);
 
-	int m = (rand() % (n*(n - 1) / 2 - (n - 1)+1)) + n - 1;
+	int maxEdgesCount = n*(n - 1) / 2;
+	int m = (rand() % (maxEdgesCount - (n - 1) + 1)) + n - 1;
 	int *prevArray = new int[n];
 	std::unordered_map<int, bool> prevMap;
 
-	// Generates 1 edge for each vertice
+	
 	prevArray[0] = getRandomVertex(n);
 	prevMap[prevArray[0]] = true;
 
+	int start, end, value;
+	// Generates 1 edge for each vertice
 	for (int i = 1; i < n; i++) {
-		int start = prevArray[rand() % i], end = getRandomVertex(n), value = getRandomWeight();
+		start = prevArray[rand() % i], end = getRandomVertex(n), value = getRandomWeight();
 		while (prevMap[end] == true)
 			end = getRandomVertex(n);
 
@@ -67,7 +70,20 @@ int** RCGGenerator::generateConnectedGraph(int n)
 		prevArray[i] = end;
 		prevMap[end] = true;
 	}
-	
+
+	int remainingEdges = rand() % (m - n + 1);
+	std::cout << remainingEdges << "\n" << m << "\n";
+	for (int i = 0; i < remainingEdges; i++)
+	{
+		value = getRandomWeight();
+		while (g[start][end] != INF)
+		{
+			start = getRandomVertex(n);
+			end = getRandomVertex(n);
+		}
+		g[start][end] = value;
+		g[end][start] = value;
+	}
 	delete[] prevArray;
 	return g;
 }
